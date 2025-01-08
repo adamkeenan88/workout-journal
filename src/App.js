@@ -5,10 +5,11 @@ import WorkoutHistory from "./WorkoutHistory";
 
 // Predefined exercises for each category
 const predefinedExercises = {
-  Push: ["Bench Press", "Overhead Press", "Incline Dumbbell Press"],
-  Pull: ["Deadlift", "Pull-Up", "Barbell Row"],
-  Legs: ["Squat", "Leg Press", "Lunges", "Leg Curls"],
+  Push: ["Barbell Bench Press", "Overhead Dumbbell Press", "Dumbbell Bench Press", "Cable Tricep Pushdowns", "Chest Dips"],
+  Pull: ["Rear Delt Fly", "Bicep Barbell Curls", "Lat Pull Down", "Seated Cable Row", "Hammer/Cross Body Curl"],
+  Legs: ["Squats", "Leg Press", "Walking Lunges", "Calf Raises", "Romanian Deadlift"],
   Abs: ["Hanging Leg Raises", "Mountain Climbers/Dead Bug/Leg Raises", "Planks", "Decline Sit-Ups", "Cable Wood Chops"],
+  Cardio: ["Running", "Cycling", "Rowing", "Swimming", "Walking"],
 };
 
 const App = () => {

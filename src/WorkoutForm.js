@@ -15,7 +15,7 @@ const WorkoutForm = ({ categories, predefinedExercises, addWorkout }) => {
     if (category) {
       const exercises = predefinedExercises[category];
       const initialExercisesData = exercises.reduce((acc, exercise) => {
-        acc[exercise] = { weight: "", reps: "", sets: "" };
+        acc[exercise] = { weight: "", reps: "", sets: "", time: "", distance: "" };
         return acc;
       }, {});
       setExercisesData(initialExercisesData);
@@ -38,11 +38,13 @@ const WorkoutForm = ({ categories, predefinedExercises, addWorkout }) => {
     const workout = {
       date: selectedDate.toLocaleDateString(), // Save the selected date
       category: selectedCategory,
-      exercises: Object.entries(exercisesData).map(([exercise, { weight, reps, sets }]) => ({
+      exercises: Object.entries(exercisesData).map(([exercise, { weight, reps, sets, time, distance }]) => ({
         exercise,
         weight,
         reps,
         sets,
+        time,
+        distance,
       })),
     };
 
@@ -103,6 +105,24 @@ const WorkoutForm = ({ categories, predefinedExercises, addWorkout }) => {
                 value={exercisesData[exercise]?.sets || ""}
                 onChange={(e) =>
                   handleInputChange(exercise, "sets", e.target.value)
+                }
+                required
+              />
+              <label>Time (mins)</label>
+              <input
+                type="number"
+                value={exercisesData[exercise]?.time || ""}
+                onChange={(e) =>
+                  handleInputChange(exercise, "time", e.target.value)
+                }
+                required
+              />
+              <label>Distance (miles)</label>
+              <input
+                type="number"
+                value={exercisesData[exercise]?.distance || ""}
+                onChange={(e) =>
+                  handleInputChange(exercise, "distance", e.target.value)
                 }
                 required
               />

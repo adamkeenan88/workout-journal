@@ -77,6 +77,8 @@ const WorkoutHistory = ({ workouts, fetchWorkouts }) => {
                         <p><strong>Weight:</strong> {exercise.weight} lbs</p>
                         <p><strong>Reps:</strong> {exercise.reps}</p>
                         <p><strong>Sets:</strong> {exercise.sets}</p>
+                        <p><strong>Time:</strong> {exercise.time} mins</p>
+                        <p><strong>Distance:</strong> {exercise.distance} miles</p>
                       </li>
                     ))}
                   </ul>
@@ -140,6 +142,20 @@ const WorkoutHistory = ({ workouts, fetchWorkouts }) => {
                   type="number"
                   value={exercise.sets}
                   onChange={(e) => handleFormChange(e, index, "sets")}
+                  required
+                />
+                <label>Time</label>
+                <input
+                  type="number"
+                  value={exercise.time}
+                  onChange={(e) => handleFormChange(e, index, "time")}
+                  required
+                />
+                <label>Distance</label>
+                <input
+                  type="number"
+                  value={exercise.distance}
+                  onChange={(e) => handleFormChange(e, index, "distance")}
                   required
                 />
               </div>
