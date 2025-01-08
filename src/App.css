@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Basic styles for the accordion */
+.accordion {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.workout-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.workout-header {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workout-header:hover {
+  background-color: #45a049;
+}
+
+.workout-details {
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.workout-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.workout-details li {
+  margin-bottom: 5px;
+}
+
+.workout-details p {
+  margin: 5px 0;
+}
+
+span {
+  font-size: 18px;
+}
